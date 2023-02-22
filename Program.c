@@ -20,7 +20,7 @@ int update_array(int (*prefsArray)[5], int cur, int pair)
 	return 0;
 }
 
-int* program_match(int (*prefsArray)[5], int dept)
+int* find_match(int (*prefsArray)[5], int dept)
 {
 	int rank = 5;
 	static int pair[2];
@@ -96,7 +96,7 @@ int main()
 	{
 		// find matching programmer and store as pair in array
 		int *match;
-		match = program_match(prefsArray, i);
+		match = find_match(prefsArray, i);
 
 		// update counts
 		deptCount -= (*(match + 0) + 1);
